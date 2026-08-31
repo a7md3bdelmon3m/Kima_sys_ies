@@ -1,0 +1,37 @@
+V3 GAP REGISTER
+================
+
+NOTE ON THIS FILE'S PROVENANCE
+-------------------------------
+This file was referenced throughout 00_CONTROL/PROJECT_STATE.md (rows
+M-16 through M-26+, CR-07, H-01 through H-12, etc.) but was NOT present
+in the packages uploaded to this session
+(KIMA_EIS_V3_ADR034_2026-08-31.zip, 30_WEB_APP.zip). This file is a
+fresh start, not a reconstruction of the original register's full
+history. If a prior copy of V3_GAP_REGISTER.txt exists elsewhere, merge
+this entry into it manually rather than treating this file as complete
+or authoritative for rows other than the one below.
+
+M-17 — Context bar as navigational filter (R3-002)
+----------------------------------------------------
+Status: CLOSED — real-device-verified (2026-08-31, ADR-035)
+Severity: (as originally logged — not re-assessed here)
+Prior status: OPEN (headless-Chromium harness confirmed breadcrumb
+  render only, not the click-to-filter interaction)
+Evidence: Real Android Chrome session, hosted at 127.0.0.1:18625.
+  Three entities with hierarchical `context` values created live;
+  breadcrumb rendered correctly per-selection; clicking the `AreaB`
+  segment narrowed the explorer list from 3 to 2 entities with a
+  visible "مُصفّى حسب السياق" indicator and clear-filter control.
+  Full detail: 00_CONTROL/DECISION_LOG.md, ADR-035.
+Follow-up (non-blocking): three-level exact-path filter, single-segment
+  (Plant-only) filter, and the clear-filter button's click behavior
+  itself were not separately exercised — only its presence was
+  confirmed.
+
+All other rows (M-16, M-22, M-23, M-26, CR-07, H-01 through H-12, etc.)
+referenced in 00_CONTROL/PROJECT_STATE.md are NOT reproduced here, since
+this session has no verified source for their original wording or
+status beyond what PROJECT_STATE.md's prose already states. Consult
+PROJECT_STATE.md directly for those until the original register is
+recovered or reconstructed deliberately.

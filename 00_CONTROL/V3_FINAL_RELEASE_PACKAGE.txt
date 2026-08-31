@@ -1,0 +1,23 @@
+KIMA EIS V3 — FINAL PROFESSIONAL HARDENED PACKAGE
+
+CORE HARDENING
+- Atomic import-row transactions.
+- Raw-content provenance and source artifact retention.
+- Claim-level evidence for import observations.
+- Manual override protection.
+- Operational change ledger.
+- Observation/property foundation.
+- Standard mapping runtime.
+- Versioned backup/restore with validation.
+- IndexedDB V4.
+- Central relationship and validation registries.
+- PWA shell cache includes local SheetJS dependency.
+
+HONEST RELEASE STATE
+- Static JavaScript syntax verification: pending final recheck.
+- Fresh integrated browser verification: NOT CONCLUSIVELY VERIFIED.
+- Large-scale performance benchmark: NOT EXECUTED.
+- P&ID/topology/impact: not falsely claimed as verified runtime features.
+
+RELEASE LABEL
+PROFESSIONAL HARDENED BUILD — RELEASE VERIFICATION PENDING

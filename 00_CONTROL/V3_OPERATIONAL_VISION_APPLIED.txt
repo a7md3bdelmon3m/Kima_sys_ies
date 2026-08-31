@@ -1,0 +1,33 @@
+KIMA EIS — OPERATIONAL VISION APPLIED
+
+PRODUCT VISION
+For the engineer, control-room operator, and field technician, KIMA EIS should turn engineering information and measurements into traceable understanding, decision options, and safer next steps for successful operation and asset/information management.
+
+IMPLEMENTED IN THIS BUILD
+- Operational Decision Center.
+- Role-aware views: Engineer / Control Room / Field.
+- Measurement/Observation capture with unit and explicit threshold context.
+- Deterministic decision engine.
+- Decision persistence and audit events.
+- Decision states: NORMAL / WATCH / CRITICAL / DATA_INSUFFICIENT.
+- Evidence-aware confidence.
+- Explicit safety boundary: no automatic control command.
+- IndexedDB V7 decision store and migration by object-store creation.
+- V7 backup support.
+- Service-worker cache V7 includes decision.js.
+
+DECISION QUALITY RULE
+The system prefers an honest DATA_INSUFFICIENT result over an invented operational recommendation.
+
+NEXT CONTROLLED EXPANSION
+1. Trend engine over time-series observations.
+2. Approved rule profiles per asset class/system.
+3. QA findings feeding decision state.
+4. Multi-signal correlation with deterministic rules.
+5. P&ID/topology context on decision cards.
+6. Change-impact linkage.
+7. Procedures/SOP references and evidence.
+8. Formal alarm/setpoint governance before any use in safety-critical contexts.
+
+RELEASE STATUS
+This layer is implemented and statically/unit tested. Browser E2E and plant-specific operational validation remain separate gates and must not be claimed PASS without execution and evidence.
