@@ -14,7 +14,7 @@
 </head>
 <body>
 
-<div id="toast-host" class="toast-host" aria-live="polite"></div>
+<div id="toast-host" class="toast-host" aria-live="polite" role="status"></div>
 
 <div class="app-shell">
 
@@ -36,9 +36,9 @@
       <div class="panel__header-row">
         <div>
           <h2 id="decision-heading">مركز القرار التشغيلي</h2>
-          <p class="muted">يحوّل القراءات الموثقة والحدود التي تدخلها أنت من الإجراء/المواصفة المعتمدة إلى بطاقة قرار قابلة للتتبع. لا يصدر التطبيق أوامر تحكم تلقائية.</p>
+          <p class="muted">يحوّل القراءات الموثقة والحدود التي تدخلها أنت من الإجراء/المواصفة المعتمدة إلى بطاقة قرار قابلة للتتبع.</p>
         </div>
-        <label class="role-selector"><span>دور العرض</span><select id="decision-role"><option value="engineer">مهندس</option><option value="control_room">غرفة التحكم</option><option value="field">الموقع / فني التشغيل</option></select></label>
+        <label class="role-selector"><span>دور العرض</span><select id="decision-role"><option value="engineer">مهندس</option><option value="control_room">غرفة التحكم</option><option value="field">ميداني / فني</option></select></label>
       </div>
       <div id="decision-summary" class="decision-summary">اختر عنصرًا هندسيًا من القائمة لعرض قراراته وقراءة بياناته.</div>
     </section>
@@ -143,7 +143,7 @@
 
       <div id="import-mode-relationships-panel" hidden>
         <p class="muted">
-          اختر ملفًا يحتوي أعمدة علاقات بين عناصر مستوردة مسبقًا: From_Tag/To_Tag (أو From_ID/To_ID)، Relationship_Type، Direction (اختياري). كل عنصر يُذكَر يجب أن يكون قد استُورد مسبقًا عبر تبويب "كيانات" أعلاه (بنفس canonical_name).
+          اختر ملفًا يحتوي أعمدة علاقات بين عناصر مستوردة مسبقًا: From_Tag/To_Tag (أو From_ID/To_ID)، Relationship_Type، Direction (اختياري). 
           لن يُكتب أي شيء في القاعدة إلا بعد المعاينة والضغط على "التزام".
         </p>
         <label class="import-file-label">
@@ -155,7 +155,29 @@
       </div>
     </section>
 
-    <section class="panel panel--backup" aria-labelledby="backup-heading"><div class="panel__header-row"><h2 id="backup-heading">حماية البيانات</h2></div><p class="muted">نسخة احتياطية محلية لبيانات النظام، مع إمكانية الاستعادة على هذا الجهاز.</p><div class="explorer-filters"><button type="button" id="backup-export-btn" class="btn btn--secondary">تصدير نسخة احتياطية</button><label class="import-file-label"><span>استعادة نسخة</span><input type="file" id="backup-import-input" accept="application/json,.json" /></label></div><div class="field-row"><label><span>وضع الاستعادة</span><select id="backup-import-mode"><option value="replace" selected>استبدال كامل (يحذف البيانات المحلية الحالية)</option><option value="merge">دمج إضافي (يضيف بدون حذف الموجود)</option></select></label></div><p id="backup-status" class="muted" aria-live="polite"></p></section>
+    <section class="panel panel--backup" aria-labelledby="backup-heading">
+      <div class="panel__header-row">
+        <h2 id="backup-heading">حماية البيانات</h2>
+      </div>
+      <p class="muted">نسخة احتياطية كاملة للبيانات مع خيار استيراد محفوظ سابق.</p>
+      <div class="explorer-filters">
+        <button type="button" id="backup-export-btn" class="btn btn--secondary">تصدير نسخة احتياطية</button>
+        <label class="import-file-label">
+          <span>استيراد نسخة احتياطية</span>
+          <input type="file" id="backup-import-input" accept="application/json,.json" />
+        </label>
+      </div>
+      <div class="field-row">
+        <label>
+          <span>طريقة الاستيراد</span>
+          <select id="backup-import-mode">
+            <option value="replace" selected>استبدال كامل (Replace) — حذف البيانات الحالية</option>
+            <option value="merge">دمج (Merge) — الاحتفاظ بالبيانات الموجودة</option>
+          </select>
+        </label>
+      </div>
+      <p id="backup-status" class="muted" aria-live="polite"></p>
+    </section>
 
     <section class="panel panel--ledger" aria-labelledby="ledger-heading">
       <h2 id="ledger-heading" class="sr-only">سجل التتبع</h2>
